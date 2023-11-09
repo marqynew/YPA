@@ -1,0 +1,230 @@
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Menghitung Mimpi - Felicia Putri Tjiasaka</title>
+
+    <link
+      rel="stylesheet"
+      href="https://feliciaputritjiasaka.com/assets/fontawesome/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div
+      id="root"
+      class="bg-slate-100 dark:bg-slate-900 font-body text-black dark:text-white"
+    >
+      <div
+        class="bg-white w-[90%] mx-auto p-4 sm:p-6 dark:bg-slate-800 min-h-screen relative"
+      >
+        <div
+          class="grid grid-cols-12 border-b items-center border-slate-300 dark:border-slate-700 pb-6 pr-2"
+        >
+          <div class="col-span-10 text-left">
+            <h1 class="font-black">Menghitung Mimpi</h1>
+          </div>
+          <div class="col-span-2 text-right">
+            <div
+              id="darkMode"
+              onclick="toggleDarkMode()"
+              class="ml-auto flex float-right cursor-pointer text-center"
+            >
+              <i class="fas fa-moon"></i>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          const toggleDarkMode = () => {
+            const targ = $("html");
+            targ.toggleClass("dark");
+            if (targ.hasClass("dark")) {
+              $("#darkMode").html('<i class="fas fa-sun"></i>');
+              localStorage.setItem("mode", "dark");
+            } else {
+              $("#darkMode").html('<i class="fas fa-moon"></i>');
+              localStorage.setItem("mode", "light");
+            }
+          };
+        </script>
+
+        <div
+          class="bg-primary-500 rounded-md px-4 py-6 grid grid-cols-12 items-center dark:bg-primary-300 my-4 sm:my-6"
+        >
+          <div class="col-span-9">
+            <p class="font-bold text-sm sm:text-lg dark:text-slate-700">
+              Hi, Kami
+            </p>
+            <h1 class="font-bold text-sm sm:text-lg mb-1 dark:text-slate-700">
+              Kelompok YPA
+            </h1>
+            <p class="text-xxs text-slate-800 sm:text-sm dark:text-slate-900">
+              Investment &amp; Pengusaha di Industri Keuangan dan Investasi.
+            </p>
+          </div>
+          <div class="col-span-3 text-center -mt-4">
+            <img
+              src="https://feliciaputritjiasaka.com/assets/welcome.gif"
+              class="mx-auto"
+            />
+          </div>
+        </div>
+
+        <div class="my-12 sm:my-16">
+          <h3 class="font-bold sm:text-lg mb-8">Apa Mimpimu?</h3>
+          <div class="grid grid-cols-3 gap-x-4 gap-y-12">
+            <a href="kalkulatorinvestasi.html" class="text-center group">
+              <div
+                class="relative transition-colors bg-primary-500 dark:bg-primary-300 group-hover:bg-primary-600 dark:group-hover:bg-primary-400 inline-block rounded-md"
+              >
+                <img
+                  src="https://feliciaputritjiasaka.com/assets/launcher/calculator.png"
+                  class="p-3 rounded-md w-12 h-12 relative items-center justify-center mx-auto block"
+                  alt=""
+                />
+              </div>
+              <div class="font-bold text-xs sm:text-sm mt-1.5">
+                Kalkulator Investasi
+              </div>
+            </a>
+            <a href="menikah.html" class="text-center group">
+              <div
+                class="relative transition-colors bg-primary-500 dark:bg-primary-300 group-hover:bg-primary-600 dark:group-hover:bg-primary-400 inline-block rounded-md"
+              >
+                <img
+                  src="https://feliciaputritjiasaka.com/assets/launcher/rings.png"
+                  class="p-3 rounded-md w-12 h-12 relative items-center justify-center mx-auto block"
+                  alt=""
+                />
+              </div>
+              <div class="font-bold text-xs sm:text-sm mt-1.5">Menikah</div>
+            </a>
+            <a href="danapensiun.html" class="text-center group">
+              <div
+                class="relative transition-colors bg-primary-500 dark:bg-primary-300 group-hover:bg-primary-600 dark:group-hover:bg-primary-400 inline-block rounded-md"
+              >
+                <img
+                  src="https://feliciaputritjiasaka.com/assets/launcher/book.png"
+                  class="p-3 rounded-md w-12 h-12 relative items-center justify-center mx-auto block"
+                  alt=""
+                />
+              </div>
+              <div class="font-bold text-xs sm:text-sm mt-1.5">
+                Dana Pensiun
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <footer
+          class="w-full mt-12 grid grid-cols-12 gap-4 items-center border-t border-slate-300 py-6 dark:border-slate-700"
+        >
+          <div
+            class="text-xs font-medium col-span-12 text-center sm:text-left sm:col-span-9"
+          >
+            <span class="dark:text-white">
+              © 2021 - 2023
+              <a href="//instagram.com/feliciaputritjiasaka" class="underline"
+                >Felicia Putri Tjiasaka</a
+              >. All Right Reserved.
+            </span>
+          </div>
+          <div
+            class="grid grid-cols-3 gap-6 sm:gap-2 col-span-12 sm:mx-0 mx-auto sm:col-span-3 dark:text-white"
+          >
+            <a href="//youtube.com/channel/UCcRPwXqvUHbf8nY5ofQ1_VA">
+              <i class="fab fa-youtube"></i
+            ></a>
+            <a href="//instagram.com/feliciaputritjiasaka">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="//tiktok.com/@felicia.tjiasaka">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </footer>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://feliciaputritjiasaka.com/assets/jquery.masknumber.min.js"></script>
+      <script src="https://feliciaputritjiasaka.com/assets/slick/slick.min.js"></script>
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+      <script src="https://feliciaputritjiasaka.com/assets/pages/core.js"></script>
+      <script>
+        const mode = localStorage.getItem("mode");
+        if (mode == "light") {
+          $("html").addClass("light");
+          $("html").removeClass("dark");
+        } else {
+          $("html").removeClass("light");
+          $("html").addClass("dark");
+        }
+      </script>
+
+      <script>
+        $(document).ready(function () {
+          var APIKey = "AIzaSyAAqse7pU0nOgkZcqeuYruMDv_RE-9LrmU";
+          var ceritaUang = "PLaRLWENa_gNqs0WEdo2f4IKTuCgBmRQVg";
+          var reqURL = "https://www.googleapis.com/youtube/v3/playlistItems";
+          var channelFeli = "UCcRPwXqvUHbf8nY5ofQ1_VA";
+
+          var options = {
+            key: APIKey,
+            part: "snippet",
+            playlistId: ceritaUang,
+            channelId: channelFeli,
+            maxResults: 24,
+          };
+          loadPlaylist();
+
+          function loadPlaylist() {
+            $.getJSON(reqURL, options, function (data) {
+              loopVideo(data);
+            });
+          }
+
+          function loopVideo(data) {
+            $.each(data.items, function (i, item) {
+              var thumbnail = item.snippet.thumbnails.medium.url;
+              var title = item.snippet.title;
+              var ID = item.snippet.resourceId.videoId;
+
+              $("#videos .swiper-wrapper").append(`
+                        <a href="https://www.youtube.com/watch?v=${ID}" class="mr-6 swiper-slide">
+                            <img src="${thumbnail}" alt="${title}" class="rounded-md mb-1 relative" />
+                            <span class="text-xs font-medium">${title}</span>
+                        </a>
+                    `);
+            });
+
+            const swiper = new Swiper(".video-grid", {
+              autoplay: {
+                delay: 3000,
+              },
+              slidesPerView: 1,
+              loop: true,
+              spaceBetween: 24,
+              autoHeight: false,
+              // Responsive breakpoints
+              breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                },
+              },
+            });
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

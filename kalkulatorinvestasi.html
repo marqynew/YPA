@@ -1,0 +1,1998 @@
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Kalkulator Investasi - YPA</title>
+
+    />
+    <meta name="msapplication-TileColor" content="#FFD23E" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://feliciaputritjiasaka.com/assets/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://feliciaputritjiasaka.com/assets/slick/slick-theme.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://feliciaputritjiasaka.com/assets/fontawesome/css/all.min.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://feliciaputritjiasaka.com/build/assets/app-5f42b4e2.css"
+    />
+    <link
+      rel="modulepreload"
+      href="https://feliciaputritjiasaka.com/build/assets/app-1632f525.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://feliciaputritjiasaka.com/build/assets/app-5f42b4e2.css"
+    />
+    <script
+      type="module"
+      src="https://feliciaputritjiasaka.com/build/assets/app-1632f525.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </head>
+
+  <body>
+    <div
+      id="root"
+      class="bg-slate-100 dark:bg-slate-900 font-body text-black dark:text-white"
+    >
+      <div
+        class="bg-white max-w-xl mx-auto p-4 sm:p-6 dark:bg-slate-800 min-h-screen relative"
+      >
+        <div
+          class="grid grid-cols-12 border-b items-center border-slate-300 dark:border-slate-700 pb-4 sm:pb-6 px-2 text-sm sm:text-base"
+        >
+          <div class="col-span-2">
+            <a
+              href="https://feliciaputritjiasaka.com"
+              class="text-dark dark:text-white"
+            >
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+          <div class="col-span-8 text-center text-dark dark:text-white">
+            <h1 class="font-bold">Kalkulator Investasi</h1>
+          </div>
+          <div class="col-span-2 text-right">
+            <div
+              id="darkMode"
+              onclick="toggleDarkMode()"
+              class="ml-auto flex float-right cursor-pointer text-center text-dark dark:text-white"
+            >
+              <i class="fas fa-moon"></i>
+            </div>
+          </div>
+        </div>
+
+        
+        </script>
+        <div
+          class="bg-primary-500 rounded-md px-2 sm:px-4 py-6 sm:py-8 grid grid-cols-12 gap-2 sm:gap-6 mt-6 items-center dark:bg-primary-300 dark:text-slate-700"
+        >
+          <div class="col-span-2 text-center">
+            <i class="fas fa-calculator text-2xl sm:text-3xl"></i>
+          </div>
+          <div class="col-span-10">
+            <p
+              id="hero-text"
+              class="text-xs sm:text-sm font-medium text-justify"
+            >
+              Kalau kita serius dengan mimpi kita, pasti kita akan merencanakan
+              strategi yang detail agar kemungkinan tercapainya jauh lebih
+              besar.
+            </p>
+          </div>
+        </div>
+        <div class="min-h-[70vh] my-6">
+          <h2 class="font-bold dark:text-white last:mb-2 sm:text-lg">
+            Yuk, ceritain mimpimu.
+          </h2>
+          <div id="story-top" class="pt-4 pb-8">
+            <div class="">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Jumlah uang yang ingin kamu capai</label
+              >
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+              >
+                <span class="text-sm dark:text-white mr-2 font-bold">Rp</span>
+                <input
+                  type="text"
+                  pattern="^(?:[1-9]|[1-9][0-9])$"
+                  inputmode="numeric"
+                  maxlength="16"
+                  class="inline-block w-40 text-left text-sm border-b-1 dark:border-b-slate-300 border-t-0 border-l-0 border-r-0 outline-none bg-transparent dark:text-white ring-0 focus:ring-0 font-bold py-2 px-1 mask-number"
+                  id="targetNominal"
+                />
+                <button
+                  data-popover-target="pop-1"
+                  tabindex="-1"
+                  type="button"
+                  class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                >
+                  <i class="fas fa-circle-question"></i>
+                </button>
+                <div
+                  data-popover=""
+                  id="pop-1"
+                  role="tooltip"
+                  class="absolute z-10 inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm dark:text-white dark:border-blue-300 dark:bg-slate-800 opacity-0 invisible"
+                  data-popper-placement="top"
+                  style="
+                    position: absolute;
+                    inset: auto auto 0px 0px;
+                    margin: 0px;
+                    transform: translate3d(-38.4px, -102.4px, 0px);
+                  "
+                >
+                  <div class="px-3 py-2">
+                    <p
+                      class="text-xs font-bold text-blue-700 dark:text-blue-400"
+                    >
+                      Berapa banyak jumlah uang yang ingin kamu kumpulkan.
+                    </p>
+                    <p
+                      class="mt-2 text-xs text-justify text-black dark:text-white"
+                    >
+                      Kamu bisa menggunakan kalkulator ini untuk milestone kamu;
+                      contohnya 100 juta pertama.
+                    </p>
+                    <p
+                      class="mt-2 text-xs text-justify text-black dark:text-white"
+                    >
+                      Kamu juga bisa menggunakan template nominal di bawah.
+                    </p>
+                  </div>
+                  <div
+                    data-popper-arrow=""
+                    style="
+                      position: absolute;
+                      left: 0px;
+                      transform: translate3d(241.6px, 0px, 0px);
+                    "
+                  ></div>
+                </div>
+                <div class="flex space-between gap-2 mt-4">
+                  <a
+                    href="javascript:void(0)"
+                    class="predefined text-xs py-1 px-2 rounded-md border border-blue-500 text-blue-500 bg-blue-50 dark:border-blue-300 dark:text-blue-300 dark:bg-blue-950 font-bold"
+                    data-target="10000000"
+                    >10 Juta</a
+                  >
+                  <a
+                    href="javascript:void(0)"
+                    class="predefined text-xs py-1 px-2 rounded-md border border-blue-500 text-blue-500 bg-blue-50 dark:border-blue-300 dark:text-blue-300 dark:bg-blue-950 font-bold"
+                    data-target="50000000"
+                    >50 Juta</a
+                  >
+                  <a
+                    href="javascript:void(0)"
+                    class="predefined text-xs py-1 px-2 rounded-md border border-blue-500 text-blue-500 bg-blue-50 dark:border-blue-300 dark:text-blue-300 dark:bg-blue-950 font-bold"
+                    data-target="100000000"
+                    >100 Juta</a
+                  >
+                  <a
+                    href="javascript:void(0)"
+                    class="predefined text-xs py-1 px-2 rounded-md border border-blue-500 text-blue-500 bg-blue-50 dark:border-blue-300 dark:text-blue-300 dark:bg-blue-950 font-bold"
+                    data-target="1000000000"
+                    >1 Milyar</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeInDown step-2 hidden">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Waktu mengumpulkan uang ini</label
+              >
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-0 pb-0"
+              >
+                <input
+                  type="text"
+                  pattern="^(?:[1-9]|[1-9][0-9])$"
+                  inputmode="numeric"
+                  maxlength="3"
+                  class="inline-block w-12 text-center text-sm border-b-1 dark:border-b-slate-300 border-t-0 border-l-0 border-r-0 outline-none bg-transparent dark:text-white ring-0 focus:ring-0 font-bold py-2 px-1 mask-number"
+                  id="targetTahun"
+                />
+                <span class="text-sm dark:text-white ml-2 font-bold"
+                  >tahun lagi</span
+                >
+                <button
+                  data-popover-target="pop-2"
+                  tabindex="-1"
+                  type="button"
+                  class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                >
+                  <i class="fas fa-circle-question"></i>
+                </button>
+                <div
+                  data-popover=""
+                  id="pop-2"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm opacity-0 dark:text-white dark:border-blue-300 dark:bg-slate-800"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="bottom"
+                  style="
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                    transform: translate3d(0px, 10.4px, 0px);
+                  "
+                >
+                  <div class="px-3 py-2">
+                    <p
+                      class="text-xs text-justify text-blue-500 font-bold dark:text-blue-400"
+                    >
+                      Berapa lama waktu yang kamu inginkan untuk mencapai
+                      nominal targetmu.
+                    </p>
+                  </div>
+                  <div
+                    data-popper-arrow=""
+                    style="
+                      position: absolute;
+                      left: 0px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animate__animated animate__fadeInDown step-3 hidden">
+            <h2 class="font-bold dark:text-white last:mb-2 sm:text-lg">
+              Thank You!
+            </h2>
+            <h2 class="font-bold dark:text-white last:mb-2 sm:text-lg">
+              Next, ayo atur strategi investasi kamu!
+            </h2>
+          </div>
+          <div id="story-bottom" class="pt-4 pb-8">
+            <div class="animate__animated animate__fadeInDown step-3 hidden">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Uang yang kamu miliki saat ini sebesar</label
+              >
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+              >
+                <span class="text-sm dark:text-white mr-2 font-bold">Rp</span>
+                <input
+                  type="text"
+                  pattern="^(?:[1-9]|[1-9][0-9])$"
+                  inputmode="numeric"
+                  maxlength="16"
+                  class="inline-block w-40 text-left text-sm border-b-1 dark:border-b-slate-300 border-t-0 border-l-0 border-r-0 outline-none bg-transparent dark:text-white ring-0 focus:ring-0 font-bold py-2 px-1 mask-number"
+                  id="uangSekarang"
+                />
+                <button
+                  data-popover-target="pop-3"
+                  tabindex="-1"
+                  type="button"
+                  class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                >
+                  <i class="fas fa-circle-question"></i>
+                </button>
+                <div
+                  data-popover=""
+                  id="pop-3"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm opacity-0 dark:text-white dark:border-blue-300 dark:bg-slate-800"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="bottom"
+                  style="
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                    transform: translate3d(0px, 10.4px, 0px);
+                  "
+                >
+                  <div class="px-3 py-2">
+                    <p
+                      class="text-xs text-justify text-blue-500 font-bold dark:text-blue-400"
+                    >
+                      Jumlah uangmu saat ini yang kamu tabung khusus untuk
+                      target keuangan ini
+                    </p>
+                  </div>
+                  <div
+                    data-popper-arrow=""
+                    style="
+                      position: absolute;
+                      left: 0px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="animate__animated animate__fadeInDown step-4 hidden">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Kamu akan menabung setiap</label
+              >
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+              >
+                <div class="flex space-between gap-2 items-center">
+                  <a
+                    href="javascript:void(0)"
+                    class="tempoItem bg-slate-100 text-center py-1 px-6 sm:px-9 rounded-md border border-slate-500 dark:bg-slate-800 dark:border-slate-700"
+                    data-target="yearly"
+                  >
+                    <small class="text-xxs sm:text-xs block font-medium"
+                      >Setiap</small
+                    >
+                    <span class="text-xs sm:text-sm block font-bold"
+                      >Tahun</span
+                    >
+                  </a>
+                  <a
+                    href="javascript:void(0)"
+                    class="tempoItem bg-slate-100 text-center py-1 px-6 sm:px-9 rounded-md border border-slate-500 dark:bg-slate-800 dark:border-slate-700"
+                    data-target="monthly"
+                  >
+                    <small class="text-xxs sm:text-xs block font-medium"
+                      >Setiap</small
+                    >
+                    <span class="text-xs sm:text-sm block font-bold"
+                      >Bulan</span
+                    >
+                  </a>
+                  <button
+                    data-popover-target="pop-4"
+                    tabindex="-1"
+                    type="button"
+                    class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                  >
+                    <i class="fas fa-circle-question"></i>
+                  </button>
+                  <div
+                    data-popover=""
+                    id="pop-4"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm opacity-0 dark:text-white dark:border-blue-300 dark:bg-slate-800"
+                    data-popper-reference-hidden=""
+                    data-popper-escaped=""
+                    data-popper-placement="bottom"
+                    style="
+                      position: absolute;
+                      inset: 0px auto auto 0px;
+                      margin: 0px;
+                      transform: translate3d(0px, 10.4px, 0px);
+                    "
+                  >
+                    <div class="px-3 py-2">
+                      <p
+                        class="text-xs text-justify text-blue-500 font-bold dark:text-blue-400"
+                      >
+                        Berapa sering kamu akan menambahkan dana ke tabunganmu
+                        khusus untuk target keuangan ini.
+                      </p>
+                      <p
+                        class="mt-2 text-xs text-justify text-black dark:text-white"
+                      >
+                        Setiap Tahun: Kamu akan menambahkan uang 1 tahun sekali
+                      </p>
+                      <p
+                        class="mt-2 text-xs text-justify text-black dark:text-white"
+                      >
+                        Setiap Bulan: Kamu akan menambahkan uang 1 bulan sekali
+                      </p>
+                    </div>
+                    <div
+                      data-popper-arrow=""
+                      style="
+                        position: absolute;
+                        left: 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="animate__animated animate__fadeInDown step-5 hidden">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Kamu akan menambahkan dana pada</label
+              >
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+              >
+                <div class="flex space-between gap-2 items-center">
+                  <a
+                    href="javascript:void(0)"
+                    class="periodeItem bg-slate-100 text-center py-1 px-6 sm:px-9 rounded-md border border-slate-500 dark:bg-slate-800 dark:border-slate-700"
+                    data-target="beginning"
+                  >
+                    <span class="text-xs sm:text-sm block font-bold">Awal</span>
+                    <small class="text-xxs sm:text-xs block font-semibold"
+                      >Periode</small
+                    >
+                  </a>
+                  <a
+                    href="javascript:void(0)"
+                    class="periodeItem bg-slate-100 text-center py-1 px-6 sm:px-9 rounded-md border border-slate-500 dark:bg-slate-800 dark:border-slate-700"
+                    data-target="end"
+                  >
+                    <span class="text-xs sm:text-sm block font-bold"
+                      >Akhir</span
+                    >
+                    <small class="text-xxs sm:text-xs block font-semibold"
+                      >Periode</small
+                    >
+                  </a>
+                  <button
+                    data-popover-target="pop-5"
+                    tabindex="-1"
+                    type="button"
+                    class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                  >
+                    <i class="fas fa-circle-question"></i>
+                  </button>
+                  <div
+                    data-popover=""
+                    id="pop-5"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm opacity-0 dark:text-white dark:border-blue-300 dark:bg-slate-800"
+                    data-popper-reference-hidden=""
+                    data-popper-escaped=""
+                    data-popper-placement="bottom"
+                    style="
+                      position: absolute;
+                      inset: 0px auto auto 0px;
+                      margin: 0px;
+                      transform: translate3d(0px, 10.4px, 0px);
+                    "
+                  >
+                    <div class="px-3 py-2">
+                      <p
+                        class="text-xs text-justify text-blue-500 font-bold dark:text-blue-400"
+                      >
+                        Kapan kamu akan menambahkan uang ke tabunganmu.
+                      </p>
+                      <p
+                        class="mt-2 text-xs text-justify text-black dark:text-white"
+                      >
+                        Awal Periode: Kamu akan menambahkan uang pada awal
+                        tahun/bulan
+                      </p>
+                      <p
+                        class="mt-2 text-xs text-justify text-black dark:text-white"
+                      >
+                        Akhir Periode: Kamu akan menambahkan uang pada akhir
+                        tahun/bulan
+                      </p>
+                    </div>
+                    <div
+                      data-popper-arrow=""
+                      style="
+                        position: absolute;
+                        left: 0px;
+                        transform: translate3d(0px, 0px, 0px);
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeInDown step-6 hidden">
+              <label
+                class="block dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5 font-bold"
+                >Target investasimu tiap
+                <span class="tempo">tahun</span> sebesar</label
+              >
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+              >
+                <span class="text-sm dark:text-white mr-2 font-bold">Rp</span>
+                <input
+                  type="text"
+                  pattern="^(?:[1-9]|[1-9][0-9])$"
+                  inputmode="numeric"
+                  maxlength="16"
+                  class="inline-block w-40 text-left text-sm border-b-1 dark:border-b-slate-300 border-t-0 border-l-0 border-r-0 outline-none bg-transparent dark:text-white ring-0 focus:ring-0 font-bold py-2 px-1 mask-number"
+                  id="targetInvestasi"
+                />
+                <button
+                  data-popover-target="pop-6"
+                  tabindex="-1"
+                  type="button"
+                  class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                >
+                  <i class="fas fa-circle-question"></i>
+                </button>
+                <div
+                  data-popover=""
+                  id="pop-6"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm opacity-0 dark:text-white dark:border-blue-300 dark:bg-slate-800"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="bottom"
+                  style="
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                    transform: translate3d(0px, 10.4px, 0px);
+                  "
+                >
+                  <div class="px-3 py-2">
+                    <p
+                      class="text-xs text-justify text-blue-500 font-bold dark:text-blue-400"
+                    >
+                      Jumlah uang yang akan kamu tambahkan setiap periodenya.
+                    </p>
+                    <p
+                      class="mt-2 text-xs text-justify text-black dark:text-white"
+                    >
+                      Contoh: kamu akan menambahkan dana setiap tahun pada awal
+                      tahun sebanyak 30 Juta. Maka masukan angka 30.000.000 pada
+                      kolom di bawah
+                    </p>
+                  </div>
+                  <div
+                    data-popper-arrow=""
+                    style="
+                      position: absolute;
+                      left: 0px;
+                      transform: translate3d(0px, 0px, 0px);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeInDown step-7 hidden">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Kamu akan investasi di produk yang returnnya</label
+              >
+
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+              >
+                <input
+                  type="text"
+                  pattern="^\d+(?:[,.]\d{1,2})?$"
+                  inputmode="numeric"
+                  maxlength="5"
+                  class="inline-block w-12 text-center text-sm border-b-1 dark:border-b-slate-300 border-t-0 border-l-0 border-r-0 outline-none bg-transparent dark:text-white ring-0 focus:ring-0 font-bold py-2 px-1"
+                  id="targetReturn"
+                />
+                <span class="text-sm dark:text-white ml-2 font-bold"
+                  >% / tahun</span
+                >
+                <button
+                  data-popover-target="pop-3"
+                  tabindex="-1"
+                  type="button"
+                  class="inline-flex text-xs text-slate-700 dark:text-slate-300 ml-2"
+                >
+                  <i class="fas fa-circle-question"></i>
+                </button>
+                <div
+                  data-popover=""
+                  id="pop-3"
+                  role="tooltip"
+                  class="absolute z-10 invisible inline-block min-w-64 text-black transition-opacity duration-300 bg-white border border-blue-500 rounded-lg shadow-sm opacity-0 dark:text-white dark:border-blue-300 dark:bg-slate-800"
+                >
+                  <div class="px-3 py-2">
+                    <p
+                      class="text-xs text-justify text-blue-500 font-bold dark:text-blue-400"
+                    >
+                      Dengan asumsi kamu akan menaruh uang tabunganmu pada
+                      instrumen investasi.
+                    </p>
+
+                    <p
+                      class="text-xs text-blue-500 text-justify mb-2 font-bold dark:text-blue-400"
+                    >
+                      Silakan masukkan data desimal dengan menggunakan titik,
+                      misal 5.75%&nbsp;atau&nbsp;10.5%.
+                    </p>
+                    <p
+                      class="mt-2 text-xs text-justify text-black dark:text-white"
+                    >
+                      Contoh: Kamu ingin menaruh uangmu di RDPT X pada aplikasi
+                      Y, dan dituliskan bahwa return per-tahunnya adalah 5%,
+                      maka isikan angka 5 pada kolom di bawah
+                    </p>
+                  </div>
+                  <div data-popper-arrow=""></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeInDown step-8 hidden">
+              <label
+                id=""
+                class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                >Kamu akan rutin berinvestasi selama</label
+              >
+
+              <div
+                class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-0 pb-0"
+              >
+                <p
+                  id=""
+                  class="rounded font-bold inline-block text-sm py-2 px-4 dark:text-white bg-slate-200 dark:bg-slate-700 targetTahun"
+                ></p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-6 animate__animated animate__fadeInDown step-8 hidden"
+          >
+            <div class="col-span-5">
+              <p class="font-bold text-xxs sm:text-xs dark:text-white">
+                Yay, mimpimu sudah jauh lebih nyata.
+              </p>
+              <p class="font-bold sm:text-xl dark:text-white">
+                Ayo lihat hasil strategimu
+              </p>
+            </div>
+            <button
+              class="dark:bg-primary-300 bg-primary-400 text-center flex items-center justify-center p-2 ml-auto rounded-md w-10 h-10 sm:w-12 sm:h-12 hover:bg-primary-500 transition-all"
+              id="start-count"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 sm:w-5 sm:h-5"
+                version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs"
+                x="0"
+                y="0"
+                viewBox="0 0 448.011 448.011"
+                xml:space="preserve"
+              >
+                <path
+                  d="M438.731,209.463l-416-192c-6.624-3.008-14.528-1.216-19.136,4.48c-4.64,5.696-4.8,13.792-0.384,19.648l136.8,182.4    l-136.8,182.4c-4.416,5.856-4.256,13.984,0.352,19.648c3.104,3.872,7.744,5.952,12.448,5.952c2.272,0,4.544-0.48,6.688-1.472    l416-192c5.696-2.624,9.312-8.288,9.312-14.528S444.395,212.087,438.731,209.463z"
+                  fill="currentColor"
+                  class="fill-slate-900 dark:fill-slate-700"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="result"
+          class="fixed inset-0 bg-slate-700/25 overflow-y-scroll hidden"
+        >
+          <div
+            class="max-w-xl bg-slate-200 mx-auto dark:bg-slate-700 relative animate__animated animate__fadeInUp p-4 sm:p-6 min-h-screen pb-20"
+          >
+            <div
+              class="animate__animated animate__fadeInUp"
+              data-navigation="1"
+            >
+              <div
+                id="resultHero"
+                class="grid grid-cols-6 rounded-md items-center py-2 px-4 mb-4 bg-emerald-400 dark:bg-emerald-800"
+              >
+                <h5 id="results-text" class="col-span-4 text-sm sm:text-lg">
+                  <b
+                    >Strateginya <b class="count-success">cocok</b> untuk
+                    mencapai mimpimu</b
+                  >
+                </h5>
+                <img
+                  id="results-img"
+                  class="col-span-2 w-36 ml-auto"
+                  src="https://feliciaputritjiasaka.com/assets/success.gif"
+                />
+              </div>
+
+              <div
+                class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+              >
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">
+                      Total uang yang kamu butuhkan
+                    </p>
+                    <h3 class="targetNominal"></h3>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="font-bold dark:text-white mb-2 text-sm sm:text-lg">
+                Strategimu
+              </h2>
+
+              <div
+                class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+              >
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-piggy-bank"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Uangmu saat ini</p>
+                    <h3 class="uangSekarang"></h3>
+                  </div>
+                </div>
+
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-money-bill-wave-alt"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">
+                      Jumlah investasi / bulan
+                    </p>
+                    <h3 class="targetInvestasi"></h3>
+                  </div>
+                </div>
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-percentage"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Return investasi</p>
+                    <h3 class="targetReturn"></h3>
+                  </div>
+                </div>
+
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-clock"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Lama investasi</p>
+                    <h3 class="targetTahun"></h3>
+                  </div>
+                </div>
+
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-trophy"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Hasil investasi</p>
+                    <h3 class="hasilInvestasi"></h3>
+                    <h3
+                      class="kekurangan text-xs text-red-500 italic dark:text-red-300"
+                    ></h3>
+                  </div>
+                </div>
+
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-pie-chart"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Breakdown</p>
+                    <div class="w-full flex mt-1 gap-0.5 mb-2">
+                      <div
+                        id="pokokInvestasiPercentage"
+                        class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 rounded-l-sm bg-blue-500 dark:bg-blue-300 sm:rounded-l-md"
+                      ></div>
+                      <div
+                        id="bungaInvestasiPercentage"
+                        class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 bg-emerald-500 dark:bg-emerald-300 rounded-r-sm sm:rounded-r-md"
+                      ></div>
+                    </div>
+                    <div class="w-full grid grid-cols-2 pt-2">
+                      <div
+                        id="pokokInvestasiStrat"
+                        class="relative text-left text-xxs sm:text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 after:-top-2 after:left-1 dark:after:border-b-slate-300"
+                      >
+                        <span class="block"></span>
+                        <p>Pokok investasi</p>
+                      </div>
+                      <div
+                        id="bungaInvestasiStrat"
+                        class="relative text-right text-xxs sm:text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 after:-top-2 after:right-1 dark:after:border-b-slate-300"
+                      >
+                        <span class="block"></span>
+                        <p>Bunga investasi</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="animate__animated animate__fadeInUp hidden"
+              data-navigation="2"
+            >
+              <div
+                class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+              >
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Nominal tujuanmu</p>
+                    <h3 class="targetNominal"></h3>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+              >
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-piggy-bank"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Uangmu saat ini</p>
+                    <h3 class="uangSekarang"></h3>
+                  </div>
+                </div>
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-money-bill-wave-alt"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Jumlah investasi</p>
+                    <h3 class="targetInvestasi"></h3>
+                  </div>
+                </div>
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-percentage"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Return investasi</p>
+                    <h3 class="targetReturn"></h3>
+                  </div>
+                </div>
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-clock"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Lama investasi</p>
+                    <h3 class="targetTahun"></h3>
+                  </div>
+                </div>
+                <div
+                  id=""
+                  class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                >
+                  <div class="row-span-2">
+                    <div
+                      class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                    >
+                      <i class="fas fa-list"></i>
+                    </div>
+                  </div>
+                  <div
+                    class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                  >
+                    <p class="text-xs sm:text-sm mb-0.5">Pilihan investasi</p>
+                    <h3 class="pilihanInvestasi"></h3>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="font-bold dark:text-white mb-2 text-sm sm:text-lg">
+                Timeline investasimu
+              </h2>
+              <div
+                class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800 py-6"
+              >
+                <div>
+                  <label
+                    id="timelineStart"
+                    class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                    >Tahun 1</label
+                  >
+                  <div
+                    class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                  >
+                    <p class="text-sm font-bold dark:text-white">
+                      Uangmu saat ini
+                    </p>
+                    <span
+                      class="uangSekarang text-sm font-bold bg-slate-200 dark:bg-slate-700 dark:text-white py-2 px-4 rounded inline-block my-2"
+                      >Rp12312312</span
+                    >
+                  </div>
+                </div>
+                <div id="timelineMid">
+                  <label
+                    id="timelineMin"
+                    class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                    >Tahun X</label
+                  >
+                  <div
+                    class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                  >
+                    <p class="text-sm font-bold dark:text-white">
+                      Pindahkan uangnya ke produk yang lebih rendah risiko,
+                      seperti Reksadana Pasar Uang &amp; Pendapatan Tetap
+                      tertentu
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    id="timelineEnd"
+                    class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                    >Tahun Y</label
+                  >
+                  <div
+                    class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-0 pb-0"
+                  >
+                    <p class="text-sm font-bold dark:text-white">
+                      Hasil Investasi
+                    </p>
+                    <span
+                      class="hasilInvestasi text-sm font-bold bg-green-200 dark:bg-green-800 dark:text-white py-2 px-4 rounded inline-block my-2"
+                      >Rp12312,2323,2</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="animate__animated animate__fadeInUp hidden pb-12"
+              data-navigation="3"
+            >
+              <h2 class="font-bold dark:text-white mb-2 text-sm sm:text-lg">
+                Pilih tipe rekomendasi
+              </h2>
+              <div
+                id="recommendationPill"
+                class="grid grid-cols-3 gap-4 text-slate-600 my-4"
+              >
+                <a
+                  href="javascript:void(0)"
+                  class="bg-white rounded-md py-2 text-center relative dark:bg-slate-800 text-blue-500 dark:text-blue-300 after:bg-blue-500 dark:after:bg-blue-300 after:absolute after:bottom-0 after:left-2 after:right-2 after:h-1 after:rounded-t"
+                  data-target="#addNominal"
+                >
+                  <i class="fas fa-plus block text-sm sm:text-base sm:mb-1"></i>
+                  <span class="text-xxs sm:text-xs font-bold leading-0"
+                    >Jumlah investasi</span
+                  >
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="bg-white rounded-md py-2 text-center relative dark:bg-slate-800 text-slate-500 dark:text-slate-300 after:absolute after:bottom-0 after:left-2 after:right-2 after:h-1 after:rounded-t"
+                  data-target="#addYear"
+                >
+                  <i
+                    class="fas fa-clock block text-sm sm:text-base sm:mb-1"
+                  ></i>
+                  <span class="text-xxs sm:text-xs font-bold leading-0"
+                    >Tunda mimpimu</span
+                  >
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  class="bg-white rounded-md py-2 text-center relative dark:bg-slate-800 text-slate-500 dark:text-slate-300 after:absolute after:bottom-0 after:left-2 after:right-2 after:h-1 after:rounded-t"
+                  data-target="#addReturn"
+                >
+                  <i
+                    class="fas fa-percentage block text-sm sm:text-base sm:mb-1"
+                  ></i>
+                  <span class="text-xxs sm:text-xs font-bold leading-0"
+                    >Naikkan return</span
+                  >
+                </a>
+              </div>
+
+              <div class="rec-container">
+                <div
+                  class="animate__animated animate__fadeInUp"
+                  id="addNominal"
+                >
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Nominal tujuanmu
+                        </p>
+                        <h3 class="targetNominal"></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-piggy-bank"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Uangmu saat ini</p>
+                        <h3 class="uangSekarang"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-money-bill-wave-alt"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Jumlah investasi / bulan
+                        </p>
+                        <h3 class="added-value" id="add-nominal"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-percentage"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Return investasi
+                        </p>
+                        <h3 class="targetReturn"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-clock"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Lama investasi</p>
+                        <h3 class="targetTahun"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-trophy"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Hasil investasi</p>
+                        <h3 class="added-value" id="res-nom"></h3>
+                      </div>
+                    </div>
+
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-pie-chart"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Breakdown</p>
+                        <div class="w-full flex mt-1 gap-0.5 mb-2">
+                          <div
+                            id="pokokInvestasiNom"
+                            class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 rounded-l-sm bg-blue-500 dark:bg-blue-300 sm:rounded-l-md"
+                          ></div>
+                          <div
+                            id="bungaInvestasiNom"
+                            class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 bg-emerald-500 dark:bg-emerald-300 rounded-r-sm sm:rounded-r-md"
+                          ></div>
+                        </div>
+                        <div class="w-full grid grid-cols-2 pt-2">
+                          <div
+                            class="pokokInvestasiStratNom relative text-left text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 dark:after:border-b-slate-300 after:-top-2 after:left-1"
+                          >
+                            <span class="block"></span>
+                            <p>Pokok investasi</p>
+                          </div>
+                          <div
+                            class="bungaInvestasiStratNom relative text-right text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 dark:after:border-b-slate-300 after:-top-2 after:right-1"
+                          >
+                            <span class="block"></span>
+                            <p>Bunga investasi</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-list"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Pilihan investasi
+                        </p>
+                        <h3 class="nomVarVariant"></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h2 class="font-bold dark:text-white mb-2 text-sm sm:text-lg">
+                    Timeline
+                  </h2>
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800 py-6"
+                  >
+                    <div>
+                      <label
+                        id="timelineStartNominal"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun 1</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Uangmu saat ini
+                        </p>
+                        <span
+                          class="uangSekarang text-sm font-bold bg-slate-200 dark:bg-slate-700 dark:text-white py-2 px-4 rounded inline-block my-2"
+                          >Rp12312312</span
+                        >
+                      </div>
+                    </div>
+                    <div class="timelineMidNominal">
+                      <label
+                        id="timelineMinNominal"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun X</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Pindahkan uangnya ke produk yang lebih rendah risiko,
+                          seperti Reksadana Pasar Uang &amp; Pendapatan Tetap
+                          tertentu
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <label
+                        id="timelineEndNominal"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun Y</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-0 pb-0"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Hasil Investasi
+                        </p>
+                        <span
+                          class="nomVarFV text-sm font-bold bg-green-200 dark:bg-green-800 dark:text-white py-2 px-4 rounded inline-block my-2"
+                          >Rp12312,2323,2</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="hidden animate__animated animate__fadeInUp"
+                  id="addYear"
+                >
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Nominal tujuanmu
+                        </p>
+                        <h3 class="targetNominal"></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-piggy-bank"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Uangmu saat ini</p>
+                        <h3 class="uangSekarang"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-money-bill-wave-alt"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Jumlah investasi / bulan
+                        </p>
+                        <h3 class="targetInvestasi"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-percentage"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Return investasi
+                        </p>
+                        <h3 class="targetReturn"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-clock"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Lama investasi</p>
+                        <h3 id="add-year"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-trophy"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Hasil investasi</p>
+                        <h3 id="res-year"></h3>
+                      </div>
+                    </div>
+
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-pie-chart"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Breakdown</p>
+                        <div class="w-full flex mt-1 gap-0.5 mb-2">
+                          <div
+                            id="pokokInvestasiYear"
+                            class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 rounded-l-sm bg-blue-500 dark:bg-blue-300 sm:rounded-l-md"
+                          ></div>
+                          <div
+                            id="bungaInvestasiYear"
+                            class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 bg-emerald-500 dark:bg-emerald-300 rounded-r-sm sm:rounded-r-md"
+                          ></div>
+                        </div>
+                        <div class="w-full grid grid-cols-2 pt-2">
+                          <div
+                            class="pokokInvestasiStratYear relative text-left text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 dark:after:border-b-slate-300 after:-top-2 after:left-1"
+                          >
+                            <span class="block"></span>
+                            <p>Pokok investasi</p>
+                          </div>
+                          <div
+                            class="bungaInvestasiStratYear relative text-right text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 dark:after:border-b-slate-300 after:-top-2 after:right-1"
+                          >
+                            <span class="block"></span>
+                            <p>Bunga investasi</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-list"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Pilihan investasi
+                        </p>
+                        <h3 class="yearVarVariant"></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h2 class="font-bold dark:text-white mb-2 text-sm sm:text-lg">
+                    Timeline
+                  </h2>
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800 py-6"
+                  >
+                    <div>
+                      <label
+                        id="timelineStartYear"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun 1</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Uangmu saat ini
+                        </p>
+                        <span
+                          class="uangSekarang text-sm font-bold bg-slate-200 dark:bg-slate-700 dark:text-white py-2 px-4 rounded inline-block my-2"
+                          >Rp12312312</span
+                        >
+                      </div>
+                    </div>
+                    <div id="timelineMidYear">
+                      <label
+                        id="timelineMinYear"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun X</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Pindahkan uangnya ke produk yang lebih rendah risiko,
+                          seperti Reksadana Pasar Uang &amp; Pendapatan Tetap
+                          tertentu
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <label
+                        id="timelineEndYear"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun Y</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-0 pb-0"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Hasil Investasi
+                        </p>
+                        <span
+                          class="yearVarFV text-sm font-bold bg-green-200 dark:bg-green-800 dark:text-white py-2 px-4 rounded inline-block my-2"
+                          >Rp12312,2323,2</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="hidden animate__animated animate__fadeInUp"
+                  id="addReturn"
+                >
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Nominal tujuanmu
+                        </p>
+                        <h3 class="targetNominal"></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-piggy-bank"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Uangmu saat ini</p>
+                        <h3 class="uangSekarang"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-money-bill-wave-alt"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Jumlah investasi / bulan
+                        </p>
+                        <h3 class="targetInvestasi"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-percentage"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Return investasi
+                        </p>
+                        <h3 id="add-return"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-clock"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Lama investasi</p>
+                        <h3 class="targetTahun"></h3>
+                      </div>
+                    </div>
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-trophy"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Hasil investasi</p>
+                        <h3 id="res-ret"></h3>
+                      </div>
+                    </div>
+
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-pie-chart"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">Breakdown</p>
+                        <div class="w-full flex mt-1 gap-0.5 mb-2">
+                          <div
+                            id="pokokInvestasiRet"
+                            class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 rounded-l-sm bg-blue-500 dark:bg-blue-300 sm:rounded-l-md"
+                          ></div>
+                          <div
+                            id="bungaInvestasiRet"
+                            class="max-w-[85%] min-w-[15%] h-6 sm:h-7 text-xxs sm:text-xs px-2 flex items-center text-white justify-center dark:text-slate-700 bg-emerald-500 dark:bg-emerald-300 rounded-r-sm sm:rounded-r-md"
+                          ></div>
+                        </div>
+                        <div class="w-full grid grid-cols-2 pt-2">
+                          <div
+                            class="pokokInvestasiStratRet relative text-left text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 dark:after:border-b-slate-300 after:-top-2 after:left-1"
+                          >
+                            <span class="block"></span>
+                            <p>Pokok investasi</p>
+                          </div>
+                          <div
+                            class="bungaInvestasiStratRet relative text-right text-xs after:absolute after:w-0 after:h-0 after:border-x-[4px] after:border-b-[4px] after:border-x-transparent after:border-b-slate-900 dark:after:border-b-slate-300 after:-top-2 after:right-1"
+                          >
+                            <span class="block"></span>
+                            <p>Bunga investasi</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800"
+                  >
+                    <div
+                      id=""
+                      class="grid grid-cols-7 sm:grid-cols-12 gap-x-0 sm:gap-x-10 items-center relative my-1"
+                    >
+                      <div class="row-span-2">
+                        <div
+                          class="bg-primary-400 dark:bg-primary-300 p-1 rounded text-xs sm:text-sm w-7 h-7 sm:w-9 sm:h-9 grid content-evenly items-center justify-items-center dark:text-slate-700"
+                        >
+                          <i class="fas fa-list"></i>
+                        </div>
+                      </div>
+                      <div
+                        class="col-span-6 sm:col-span-11 sm:ml-4 ml-0 mb-0.5 text-sm sm:text-base font-bold dark:text-white py-2 sm:py-4 border-t-0"
+                      >
+                        <p class="text-xs sm:text-sm mb-0.5">
+                          Pilihan investasi
+                        </p>
+                        <h3 class="retVarVariant"></h3>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h2 class="font-bold dark:text-white mb-2 text-sm sm:text-lg">
+                    Timeline
+                  </h2>
+                  <div
+                    class="bg-white px-4 py-2 sm:px-6 sm:py-4 rounded-md mb-4 sm:mb-6 dark:bg-slate-800 py-6"
+                  >
+                    <div>
+                      <label
+                        id="timelineStartReturn"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun 1</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Uangmu saat ini
+                        </p>
+                        <span
+                          class="uangSekarang text-sm font-bold bg-slate-200 dark:bg-slate-700 dark:text-white py-2 px-4 rounded inline-block my-2"
+                          >Rp12312312</span
+                        >
+                      </div>
+                    </div>
+                    <div id="timelineMidReturn">
+                      <label
+                        id="timelineMinReturn"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun X</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-[2px] pb-6"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Pindahkan uangnya ke produk yang lebih rendah risiko,
+                          seperti Reksadana Pasar Uang &amp; Pendapatan Tetap
+                          tertentu
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <label
+                        id="timelineEndReturn"
+                        class="block font-bold mb-2 dark:text-white text-sm ml-[1.5rem] relative before:absolute before:w-2 before:h-2 dark:before:bg-slate-200 before:bg-slate-900 before:rounded-full before:-left-6 before:top-1.5"
+                        >Tahun Y</label
+                      >
+                      <div
+                        class="block ml-[1.5rem] my-2 pt-2 relative before:absolute before:h-full before:bg-slate-900 dark:before:bg-slate-200 before:rounded-full before:-left-[1.3rem] before:top-0 before:w-0 pb-0"
+                      >
+                        <p class="text-sm font-bold dark:text-white">
+                          Hasil Investasi
+                        </p>
+                        <span
+                          class="retVarFV text-sm font-bold bg-green-200 dark:bg-green-800 dark:text-white py-2 px-4 rounded inline-block my-2"
+                          >Rp12312,2323,2</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative max-w-xl mx-auto">
+            <div
+              id="navigation"
+              class="fixed bottom-0 rounded-md max-w-xl w-full box-border"
+            >
+              <div
+                class="grid grid-cols-3 gap-6 bg-white px-2 sm:px-6 dark:bg-slate-800 border-t border-slate-300 dark:border-slate-600 pb-5 sm:pb-3"
+              >
+                <a
+                  id="navStrategy"
+                  href="javascript:void(0)"
+                  class="text-center text-xs font-bold p-2 m-0 border-t-4 border-transparent transition-colors relative after:absolute after:h-1 after:-top-1 after:left-3 after:right-3 hover:after:bg-blue-500 dark:hover:after:bg-blue-300 after:rounded-b-md text-blue-500 after:bg-blue-500 dark:text-blue-300 dark:after:bg-blue-300"
+                  data-target="1"
+                >
+                  <i
+                    class="fas fa-bullseye block text-sm sm:text-base mb-1"
+                  ></i>
+                  Strategimu
+                </a>
+                <a
+                  id="navTimeline"
+                  href="javascript:void(0)"
+                  class="text-center text-xs font-bold p-2 m-0 border-t-4 border-transparent transition-colors relative after:absolute after:h-1 after:-top-1 after:left-3 after:right-3 hover:after:bg-blue-500 dark:hover:after:bg-blue-300 after:rounded-b-md text-slate-400 after:bg-transparent"
+                  data-target="2"
+                >
+                  <i class="fas fa-clock block text-sm sm:text-base mb-1"></i>
+                  Timeline
+                </a>
+                <a
+                  id="navRecommendation"
+                  href="javascript:void(0)"
+                  class="text-center text-xs font-bold p-2 m-0 border-t-4 border-transparent transition-colors relative after:absolute after:h-1 after:-top-1 after:left-3 after:right-3 hover:after:bg-blue-500 dark:hover:after:bg-blue-300 after:rounded-b-md text-slate-400 after:bg-transparent hidden"
+                  data-target="3"
+                >
+                  <i class="fas fa-heart block text-sm sm:text-base mb-1"></i>
+                  Rekomendasi
+                </a>
+
+                <div class="flex mx-auto">
+                  <a
+                    href="javascript:void(0)"
+                    class="text-center text-xs font-bold text-red-500 hover:text-red-400 dark:text-red-300 p-2 border-t-4 border-transparent"
+                    onclick="closeResults()"
+                  >
+                    <i class="fas fa-times block text-sm sm:text-base mb-1"></i>
+                    Tutup
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer
+          class="mt-12 grid grid-cols-12 gap-4 items-center border-t border-slate-300 py-6 dark:border-slate-700"
+        >
+          <div
+            class="text-xs font-medium col-span-12 text-center sm:text-left sm:col-span-9"
+          >
+            <span class="dark:text-white">
+              © 2021 - 2023
+              <a href="//instagram.com/feliciaputritjiasaka" class="underline"
+                >YangPentingAda(YPA)</a
+              >. All Right Reserved.
+            </span>
+          </div>
+          <div
+            class="grid grid-cols-3 gap-6 sm:gap-2 col-span-12 sm:mx-0 mx-auto sm:col-span-3 dark:text-white"
+          >
+            <a href="//youtube.com/channel/UCcRPwXqvUHbf8nY5ofQ1_VA">
+              <i class="fab fa-youtube"></i
+            ></a>
+            <a href="//instagram.com/feliciaputritjiasaka">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="//tiktok.com/@felicia.tjiasaka">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </footer>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://feliciaputritjiasaka.com/assets/jquery.masknumber.min.js"></script>
+      <script src="https://feliciaputritjiasaka.com/assets/slick/slick.min.js"></script>
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+      <script src="https://feliciaputritjiasaka.com/assets/pages/core.js"></script>
+      <script>
+        const mode = localStorage.getItem("mode");
+        if (mode == "light") {
+          $("html").addClass("light");
+          $("html").removeClass("dark");
+        } else {
+          $("html").removeClass("light");
+          $("html").addClass("dark");
+        }
+      </script>
+      <script src="https://feliciaputritjiasaka.com/assets/pages/main.js?ver=1.9.5"></script>
+      <script src="https://feliciaputritjiasaka.com/assets/pages/annuity.js?ver=1.9.5"></script>
+    </div>
+  </body>
+</html>
