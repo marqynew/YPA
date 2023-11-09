@@ -82,7 +82,7 @@
      </form>
      
           </div>
-          <img src="YPAA.jpg" alt="Deskripsi Gambar">
+          <img src="YPAA.jpg.jpg" alt="Deskripsi Gambar">
 	
      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
